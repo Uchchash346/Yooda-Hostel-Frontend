@@ -24,11 +24,6 @@ const FoodItem = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* <tr>
-                            <th scope="row">1</th>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr> */}
                         {
                             displayFoods.map(displayFood =>
                                 <tr key={displayFood.id}>
