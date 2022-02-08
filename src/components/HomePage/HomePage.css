@@ -1,9 +1,6 @@
 *{
     background-color: #E4F1CF;
 }
-/* .lottie-icon {
-    padding-top: 450px;
-} */
 
 button{
     font-weight: bold;
@@ -13,8 +10,3 @@ button{
     z-index:1 !important;
     padding-top: 300px !important;
 }
-
-/* .lottie-icon{
-    height: 85px;
-    width: 85px;
-} */

@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-
+import { MdDelete } from 'react-icons/md';
+import { FiEdit } from 'react-icons/fi';
+import './FoodItem.css'
+// MdDelete
 const FoodItem = () => {
 
     const [displayFoods, setDisplayFoods] = useState([]);
@@ -11,7 +14,7 @@ const FoodItem = () => {
     }, [])
 
     return (
-        <div className="container pt-5">
+        <div className="container pt-5 food-item-area">
             <h1 className="text-center pt-5">Food Item</h1>
             <a href="/addFoodItem"><small>Add Food Item</small></a>
             <div className="container pt-3">
@@ -30,6 +33,8 @@ const FoodItem = () => {
                                     <th scope="row" className="text-center">{displayFood._id}</th>
                                     <td>{displayFood.name}</td>
                                     <td>{displayFood.price}</td>
+                                    <td><MdDelete className="icon-button" /></td>
+                                    <td><FiEdit className="icon-button" /></td>
                                 </tr>
                             )
                         }
