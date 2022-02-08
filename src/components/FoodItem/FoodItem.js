@@ -13,6 +13,24 @@ const FoodItem = () => {
             .then(data => setDisplayFoods(data))
     }, [])
 
+
+    // Delete Food Item
+    const handleDeleteFoodItem = (id) => {
+        const proceed = window.confirm('Do you want to DELETE this food item?')
+        if (proceed) {
+            const url = `http://localhost:5500/foods/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    alert('Deleted food item successfully');
+                    const remainingFoodItems = displayFoods.filter(displayFood => displayFood._id !== id)
+                    setDisplayFoods(remainingFoodItems);
+                })
+        }
+    }
+
     return (
         <div className="container pt-5 food-item-area">
             <h1 className="text-center pt-5">Food Item</h1>
@@ -29,11 +47,14 @@ const FoodItem = () => {
                     <tbody>
                         {
                             displayFoods.map(displayFood =>
-                                <tr key={displayFood.id}>
+                                <tr key={displayFood._id}>
                                     <th scope="row" className="text-center">{displayFood._id}</th>
                                     <td>{displayFood.name}</td>
                                     <td>{displayFood.price}</td>
-                                    <td><MdDelete className="icon-button" /></td>
+                                    <td
+                                        onClick={() => handleDeleteFoodItem(displayFood._id)}>
+                                        <MdDelete className="icon-button" />
+                                    </td>
                                     <td><FiEdit className="icon-button" /></td>
                                 </tr>
                             )

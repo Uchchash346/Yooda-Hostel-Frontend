@@ -12,7 +12,7 @@ const HomePage = () => {
                 <a href="/foodItem">
                     <button type="button" class="btn btn-outline-success btn-lg ms-3 text-bold">Food Item</button>
                 </a>
-                <a href="/studentInfo">
+                <a href="/studentInformation">
                     <button type="button" class="btn btn-outline-danger btn-lg ms-3 text-bold">Student Info</button>
                 </a>
                 <a href="/foodDistribution">

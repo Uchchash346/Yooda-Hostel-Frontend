@@ -33,7 +33,6 @@ const AddFoodItem = () => {
     return (
         <div className="container pt-5">
             <h1 className="text-center pt-5">Please, add new food item</h1>
-            <a href="/foodItem"><small>Back to Food Item page</small></a>
             <form className="pt-5" onSubmit={handleAddFood}>
                 <div className="mb-3 row ">
                     <input
