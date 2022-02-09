@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { MdDelete } from 'react-icons/md';
 import { FiEdit } from 'react-icons/fi';
 import './FoodItem.css'
+import { Link } from 'react-router-dom';
 // MdDelete
 const FoodItem = () => {
 
@@ -55,7 +56,11 @@ const FoodItem = () => {
                                         onClick={() => handleDeleteFoodItem(displayFood._id)}>
                                         <MdDelete className="icon-button" />
                                     </td>
-                                    <td><FiEdit className="icon-button" /></td>
+                                    <Link to={`/foods/update/${displayFood._id}`}>
+                                        <td>
+                                            <FiEdit className="icon-button" />
+                                        </td>
+                                    </Link>
                                 </tr>
                             )
                         }

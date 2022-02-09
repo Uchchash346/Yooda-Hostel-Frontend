@@ -66,7 +66,6 @@ const DisplayStudentInfo = () => {
                                     <td><FiEdit className="icon-button" /></td>
                                 </tr>
                             )
-
                         }
                     </tbody>
                 </table>
