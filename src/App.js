@@ -8,6 +8,7 @@ import HomePage from './components/HomePage/HomePage';
 // import Login from './components/Login/Login';
 import DisplayStudentInfo from './components/StudentInfo/DisplayStudentInfo';
 import StudentInfo from './components/StudentInfo/StudentInfo';
+import UpdateStudentInfo from './components/StudentInfo/UpdateStudentInfo';
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
         {/* <Route path="" element={<Header />} /> */}
         <Route path="/foodItem" element={<FoodItem />} />
         <Route path="/addFoodItem" element={<AddFoodItem />} />
-        <Route path="/addStudentInformation" element={<StudentInfo />} />
         <Route path="/studentInfo" element={<DisplayStudentInfo />} />
+        <Route path="/addStudentInformation" element={<StudentInfo />} />
         <Route path="/foods/update/:id" element={<UpdateFoodItem />} />
+        <Route path="/students/update/:id" element={<UpdateStudentInfo />} />
       </Routes>
 
     </>

@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { FiEdit } from 'react-icons/fi';
 import { MdDelete } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 import './StudentInfo.css';
 
 const DisplayStudentInfo = () => {
@@ -63,7 +64,11 @@ const DisplayStudentInfo = () => {
                                         onClick={() => handleDeleteStudentInformation(displayStudents._id)}>
                                         <MdDelete className="icon-button" />
                                     </td>
-                                    <td><FiEdit className="icon-button" /></td>
+                                    <Link to={`/students/update/${displayStudents._id}`}>
+                                        <td>
+                                            <FiEdit className="icon-button" />
+                                        </td>
+                                    </Link>
                                 </tr>
                             )
                         }

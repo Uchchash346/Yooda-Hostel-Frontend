@@ -48,7 +48,6 @@ const UpdateFoodItem = () => {
             })
         e.preventDefault();
     }
-
     return (
         <div className="container">
             <h2 className="pt-2">Update: {displayFoods.name}</h2>
