@@ -5,7 +5,6 @@ import FoodItem from './components/FoodItem/FoodItem';
 import UpdateFoodItem from './components/FoodItem/UpdateFoodItem';
 import Header from './components/Header/Header';
 import HomePage from './components/HomePage/HomePage';
-// import Login from './components/Login/Login';
 import DisplayStudentInfo from './components/StudentInfo/DisplayStudentInfo';
 import StudentInfo from './components/StudentInfo/StudentInfo';
 import UpdateStudentInfo from './components/StudentInfo/UpdateStudentInfo';
@@ -16,7 +15,6 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* <Route path="" element={<Header />} /> */}
         <Route path="/foodItem" element={<FoodItem />} />
         <Route path="/addFoodItem" element={<AddFoodItem />} />
         <Route path="/studentInfo" element={<DisplayStudentInfo />} />
