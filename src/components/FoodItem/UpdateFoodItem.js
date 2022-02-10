@@ -9,7 +9,7 @@ const UpdateFoodItem = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5500/foods/${id}`;
+        const url = `https://powerful-mountain-63300.herokuapp.com/foods/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setDisplayFoods(data))
@@ -31,7 +31,7 @@ const UpdateFoodItem = () => {
     }
 
     const handleUpdateFoodItem = (e) => {
-        const url = `http://localhost:5500/foods/${id}`;
+        const url = `https://powerful-mountain-63300.herokuapp.com/foods/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

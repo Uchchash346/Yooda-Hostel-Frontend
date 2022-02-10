@@ -13,7 +13,7 @@ const AddFoodItem = () => {
         const price = priceRef.current.value;
 
         const newFood = { name, price };
-        fetch('http://localhost:5500/foods', {
+        fetch('https://powerful-mountain-63300.herokuapp.com/foods', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -9,7 +9,7 @@ const FoodItem = () => {
 
     const [displayFoods, setDisplayFoods] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5500/foods')
+        fetch('https://powerful-mountain-63300.herokuapp.com/foods')
             .then(res => res.json())
             .then(data => setDisplayFoods(data))
     }, [])
@@ -19,7 +19,7 @@ const FoodItem = () => {
     const handleDeleteFoodItem = (id) => {
         const proceed = window.confirm('Do you want to DELETE this food item?')
         if (proceed) {
-            const url = `http://localhost:5500/foods/${id}`
+            const url = `https://powerful-mountain-63300.herokuapp.com/foods/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

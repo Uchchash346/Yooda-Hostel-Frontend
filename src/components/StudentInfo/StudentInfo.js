@@ -23,7 +23,7 @@ const StudentInfo = () => {
 
         const newStudent = { name, roll, age, classNo, hallName, statusActive };
 
-        fetch('http://localhost:5500/students', {
+        fetch('https://powerful-mountain-63300.herokuapp.com/students', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

@@ -6,7 +6,7 @@ const UpdateStudentInfo = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5500/students/${id}`;
+        const url = `https://powerful-mountain-63300.herokuapp.com/students/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setDisplayInfo(data))
@@ -98,7 +98,7 @@ const UpdateStudentInfo = () => {
     }
 
     const handleUpdateStudentsInformation = (e) => {
-        const url = `http://localhost:5500/students/${id}`;
+        const url = `https://powerful-mountain-63300.herokuapp.com/students/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

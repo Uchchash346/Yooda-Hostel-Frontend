@@ -8,7 +8,7 @@ import './StudentInfo.css';
 const DisplayStudentInfo = () => {
     const [displayInfo, setDisplayInfo] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5500/students')
+        fetch('https://powerful-mountain-63300.herokuapp.com/students')
             .then(res => res.json())
             .then(data => setDisplayInfo(data))
     }, [])
@@ -18,7 +18,7 @@ const DisplayStudentInfo = () => {
     const handleDeleteStudentInformation = (id) => {
         const proceed = window.confirm('Do you want to DELETE this information?')
         if (proceed) {
-            const url = `http://localhost:5500/students/${id}`
+            const url = `https://powerful-mountain-63300.herokuapp.com/students/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
